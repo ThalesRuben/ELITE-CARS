@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="pagina_produto.css" />
+    <title>ELITE CARS / CARROS</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="/pagina_inicial/index.html">ELITE<span>CARS</span></a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <span><i class="ri-menu-line"></i></span>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/Pagina_Produtos/pagina_produtos.html">GRUPO DE CARROS</a></li>
+        <li><a href="#">OFERTAS</a></li>
+        <li><a href="/Sobre_nos/sobre_nos.html">SOBRE NOS</a></li>
+        <li><a href="/contato/contato.html">CONTATO</a></li>
+        <li><a href="/blog/blog.html">BLOG</a></li>
+      </ul>
+      <div class="nav__btns">
+        <a href="/LOGIN/Login.html" class="btn sign__up">LOGIN</a>
+        <a href="/LOGIN/Login.html" class="btn sign__in">CADASTRAR</a>
+      </div>
+    </nav>
+
+    <!-- SEARCH CARS -->
+     <main>
+  <div class="search-container" role="search" aria-label="Barra de pesquisa para reserva de veículo">
+    <form action="#" method="GET" novalidate>
+      <div class="form-group">
+        <label for="location">Local de Retirada</label>
+        <input id="location" name="location" type="text" placeholder="Digite a localização" autocomplete="off" required aria-required="true"/>
+      </div>
+      <div class="form-group">
+        <label for="pickup-date">Data de Retirada</label>
+        <input id="pickup-date" name="pickupDate" type="date" required aria-required="true"/>
+      </div>
+      <div class="form-group">
+        <label for="pickup-time">Hora de Retirada</label>
+        <input id="pickup-time" name="pickupTime" type="time" required aria-required="true"/>
+      </div>
+      <button type="submit" aria-label="Pesquisar disponibilidade">
+        <span class="material-icons" aria-hidden="true">Search</span>
+        Buscar
+      </button>
+    </form>
+  </div>
+<div class="catalog-container">
+  <article class="car-card">
+    <img src="/assets/208.png" alt="Carro 1" class="car-image" />
+    <div class="car-info">
+      <h3 class="car-title"></h3>
+      <p class="car-price"></p>
+    </div>
+  </article>
+  <article class="car-card">
+    <img src="/assets/polo.png" alt="Carro 2" class="car-image" />
+    <div class="car-info">
+      <h3 class="car-title"></h3>
+      <p class="car-price"></p>
+    </div>
+  </article>
+  <article class="car-card">
+    <img src="/assets/hb20.png" alt="Carro 3" class="car-image" />
+    <div class="car-info">
+      <h3 class="car-title"></h3>
+      <p class="car-price"></p>
+    </div>
+  </article>
+  <article class="car-card">
+    <img src="/assets/onix.png" alt="Carro 3" class="car-image" />
+    <div class="car-info">
+      <h3 class="car-title"></h3>
+      <p class="car-price"></p>
+    </div>
+  </article>
+   <article class="car-card">
+    <img src="/assets/hb20 sedan.png" alt="Carro 3" class="car-image" />
+    <div class="car-info">
+      <h3 class="car-title"></h3>
+      <p class="car-price"></p>
+    </div>
+  </article>
+  <!-- Adicione mais cards conforme necessário -->
+</div>
+  
+</main>

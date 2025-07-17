@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/contato/contato.css" />
+    <title>ELITE CARS / CONTATO</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="pagina_inicial/index.html">ELITE<span>CARS</span></a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <span><i class="ri-menu-line"></i></span>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/Pagina_Produtos/pagina_produtos.html">GRUPO DE CARROS</a></li>
+        <li><a href="#">OFERTAS</a></li>
+        <li><a href="/Sobre_nos/sobre_nos.html">SOBRE NOS</a></li>
+        <li><a href="/contato/contato.html">CONTATO</a></li>
+        <li><a href="/blog/blog.html">BLOG</a></li>
+      </ul>
+      <div class="nav__btns">
+        <a href="/LOGIN/Login.html" class="btn sign__up">LOGIN</a>
+        <a href="/LOGIN/Login.html" class="btn sign__in">CADASTRAR</a>
+      </div>
+    </nav>
+    <main>
+    <section class="contact-section">
+      <h1>Fale Conosco</h1>
+      <p>Tem alguma dúvida ou deseja entrar em contato? Preencha o formulário abaixo e responderemos o mais breve possível.</p>
+      <form class="contact-form" action="#" method="POST" novalidate>
+        <label for="name">Nome Completo</label>
+        <input type="text" id="name" name="name" placeholder="Seu nome completo" required aria-required="true" />
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required aria-required="true" />
+        <label for="subject">Assunto</label>
+        <input type="text" id="subject" name="subject" placeholder="Assunto da mensagem" required aria-required="true" />
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="5" placeholder="Escreva sua mensagem aqui..." required aria-required="true"></textarea>
+        <button type="submit" aria-label="Enviar mensagem">
+          <span class="material-icons" aria-hidden="true"></span>
+          Enviar
+        </button>
+      </form>
+    </section>
+  </main>

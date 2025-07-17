@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/LOGIN/login.css" />
+    <title>ELITE CARS / LOGIN</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="/pagina_inicial/index.html">ELITE<span>CARS</span></a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <span><i class="ri-menu-line"></i></span>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/Pagina_Produtos/pagina_produtos.html">GRUPO DE CARROS</a></li>
+        <li><a href="#">OFERTAS</a></li>
+        <li><a href="/Sobre_nos/sobre_nos.html">SOBRE NOS</a></li>
+        <li><a href="/contato/contato.html">CONTATO</a></li>
+        <li><a href="/blog/blog.html">BLOG</a></li>
+      </ul>
+      <div class="nav__btns">
+        <a href="Login.html" class="btn sign__up">LOGIN</a>
+        <a href="Login.html" class="btn sign__in">CADASTRAR</a>
+      </div>
+    </nav>
+     <header>
+      <div class="container">
+        <div class="item">
+
+          <h2 class="logo"> ELITE CARS</h2>
+          <div class="text-item">
+            <h2>Bem vindo!<br><span>
+              A sua nova aventura!
+            </span>
+            </h2>
+            <p>
+              Realize o seu cadastro
+            </p>
+            <div class="social-icon">
+              <a href="#"<i class="fa-brands fa-instagram"></i></a>
+              <a href="#"<i class="fa-brands fa-github"></i></a>
+              <a href="#"<i class="fa-brands fa-linkedin"></i></a>
+                
+              
+            </div>
+
+
+
+          </div>
+
+
+        </div>
+        <div class="login-section">
+          <div class="form-box login">
+            <form action="">
+              <h2>Entrar</form>
+                <div class="input-box">
+                  <span class="icon"><i class='bx bxs-envelope'></i></span>
+                  <input type="email">
+                  <label for="">Email</label>
+                </div>
+                 <div class="input-box">
+                  <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                  <input type="email">
+                  <label for="">Senha</label>                  
+                </div>
+                <div class="remember-password">
+                        <label for=""><input type="checkbox">Lembrar-me</label>
+                        <a href="#">Esuqeci minha senha</a>
+                    </div>
+                    <button class="btn">Entrar</button>
+                    <div class="create-account">
+                        <p>Criar nova conta? <a href="#" class="register-link">Registrar-se</a></p>
+                    </div>
+
+
+                </div>
+
+            </form>
+
+          </div>
+        </div>
+
+
+
+
+      </div>
+           <!-- SIGN UP FORM CREATION -->
+
+<script>
+    const loginForm = document.querySelector('.form-box.login form');
+    const registerForm = document.querySelector('.form-box.register form');
+
+    // Função para registrar um novo usuário
+    registerForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = registerForm.querySelector('input[type="email"]').value;
+        const password = registerForm.querySelector('input[type="password"]').value;
+
+        const response = await fetch('http://localhost:3000/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
+        });
+
+        const data = await response.json();
+        alert(data.message);
+    });
+
+    // Função para fazer login
+    loginForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = loginForm.querySelector('input[type="email"]').value;
+        const password = loginForm.querySelector('input[type="password"]').value;
+
+        const response = await fetch('http://localhost:3000/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
+        });
+
+        const data = await response.json();
+        alert(data.message);
+    });
+</script>
+
+
+
+
+    </header>
+    <script src="index.js"></script>
+  </body>
